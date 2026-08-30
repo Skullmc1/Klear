@@ -1,0 +1,43 @@
+{
+  "name": "@klear/core",
+  "version": "0.1.0",
+  "description": "Klear core vectorization engine — vectorizes PNG/JPEG to SVG via Potrace, ImageTracer, or Edge detection",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx --watch src/index.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "imagetracerjs": "^1.2.6",
+    "potrace": "^2.1.8",
+    "sharp": "^0.35.4",
+    "svgo": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.0",
+    "@types/potrace": "^2.1.5",
+    "tsx": "^4.20.0",
+    "typescript": "^5.5.0",
+    "vitest": "^1.6.0"
+  }
+}

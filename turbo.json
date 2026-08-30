@@ -1,0 +1,12 @@
+{
+  "$schema": "https://turbo.build/task-docs/rs/task.json",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", "*.tsbuildinfo"]
+    },
+    "lint": {},
+    "test": { "dependsOn": ["build"], "inputs": ["src/**/*.ts", "tests/**"] },
+    "typecheck": {}
+  }
+}

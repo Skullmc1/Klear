@@ -1,0 +1,38 @@
+{
+  "name": "@klear/cli",
+  "version": "0.1.0",
+  "description": "Klear CLI — interactive TUI for vectorizing raster images",
+  "license": "MIT",
+  "bin": {
+    "klear": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx --watch src/index.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "test": "vitest run",
+    "test:watch": "vitest watch"
+  },
+  "dependencies": {
+    "@klear/core": "file:../core",
+    "blessed": "^0.1.81",
+    "chokidar": "^3.5.3",
+    "mime-types": "^2.1.35"
+  },
+  "devDependencies": {
+    "@types/blessed": "^0.1.27",
+    "@types/node": "^22.5.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.5.0",
+    "vitest": "^1.6.0"
+  }
+}

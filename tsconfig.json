@@ -1,0 +1,23 @@
+// Root config — extended by each package's tsconfig
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noUncheckedIndexedAccess": true,
+    "esModuleInterop": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "sourceMap": true,
+    "declaration": true,
+    "outDir": "dist",
+    "resolveJsonModule": true,
+    "allowJs": false
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "tests"]
+}
